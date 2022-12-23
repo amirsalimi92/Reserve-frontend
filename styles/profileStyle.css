@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+/* original tags */
+* {
+  font-family: "Fredoka One";
+}
+
+.base {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 0.08fr 0.92fr;
+  grid-template-areas:
+    "navbarFull"
+    "profileContent";
+}
+
+.navbarFull {
+  grid: navbarFull;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(20%, auto);
+  grid-template-areas: "navbarTop";
+  background-color: aqua;
+}
+
+.navbarTop {
+  grid: navbarTop;
+  display: grid;
+  grid-template-columns: minmax(100px, 10%) minmax(5%, auto) minmax(100px, 10%);
+}
+
+.navbarBottom {
+  grid: navbarBottom;
+  display: none;
+  background-color: blue;
+}
+
+.hamburger {
+  grid: hamburger;
+  background-color: antiquewhite;
+}
+
+.signout {
+  grid: signout;
+  background-color: brown;
+}
+
+.profileContent {
+  grid: profileContent;
+  background-color: blueviolet;
+}
