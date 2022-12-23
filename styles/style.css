@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+/* Google classes */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  position: relative;
+  right: 2.25rem;
+  top: 0.2rem;
+  color: black;
+  cursor: pointer;
+}
+
+/* original tags */
+* {
+  font-family: "Fredoka One";
+}
+
+/* base */
+.loginMain {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "loginData loginBackground";
+  min-height: 100vh;
+  background-image: url("medias/background.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+/* login */
+.loginData {
+  grid: loginData;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: grid;
+  grid-template-rows: 2fr 3fr 2fr;
+  grid-template-areas:
+    "loginText"
+    "loginInput"
+    "loginRegister";
+}
+
+.loginText {
+  grid: loginText;
+  filter: blur(0px);
+  display: flex;
+  align-items: center;
+  color: azure;
+  font-size: 3.5em;
+  padding-left: 5%;
+}
+
+.loginInput {
+  grid: loginInput;
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  grid-row-gap: 5%;
+  grid-template-areas:
+    "loginForm"
+    "loginButton";
+}
+
+.loginForm {
+  grid: loginForm;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.loginForm > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginUsenameLabel,
+.loginPasswordLabel {
+  color: azure;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.loginUsenameInput,
+.loginPasswordInput {
+  border-radius: 0.75rem;
+  background-color: silver;
+  font-size: 1rem;
+  padding: 0 1rem;
+  width: 75%;
+  height: 75%;
+  opacity: 0.7;
+}
+
+.loginUsenameInput:focus,
+.loginPasswordInput:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.loginBackground {
+  grid: loginBackground;
+}
+
+.loginButton {
+  grid: loginButton;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  margin-right: 12.5%;
+}
+
+.loginButton > button {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 1.5rem;
+  border: none;
+  background-image: linear-gradient(to right, #fb7ba2, #fce043);
+  color: azure;
+  font-size: larger;
+  cursor: pointer;
+}
+
+/* time */
+.loginTime {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: azure;
+  font-size: 5rem;
+}
+
+.loginRegister {
+  grid: loginRegister;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  font-size: 1.2rem;
+}
+
+.loginRegister > span {
+  cursor: pointer;
+}
+
+/* Register */
+.loginRegisterPage {
+  grid: loginRegisterPage;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-row-gap: 5%;
+  grid-template-areas:
+    "loginText"
+    "loginInput"
+    "loginRegister";
+}
+
+.loginInputReg {
+  grid: loginInput;
+  display: grid;
+  grid-template-rows: 5fr 2fr;
+  grid-row-gap: 5%;
+  grid-template-areas:
+    "loginForm"
+    "loginButton";
+}
+
+.loginFormReg {
+  grid: loginFormReg;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.loginFormReg > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginEmailLabelReg,
+.loginUsenameLabelReg,
+.loginPasswordLabelReg {
+  color: azure;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.loginEmailInputReg,
+.loginUsenameInputReg,
+.loginPasswordInputReg {
+  border-radius: 0.75rem;
+  background-color: silver;
+  font-size: 1rem;
+  padding: 0 1rem;
+  width: 75%;
+  height: 75%;
+  opacity: 0.7;
+}
+
+.loginButtonReg {
+  grid: loginButton;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-right: 12.5%;
+  margin-left: 7.5%;
+}
+
+.loginButtonReg > div:nth-child(1) {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  color: azure;
+  font-size: 1.3rem;
+}
+
+.loginButtonReg > div:nth-child(2) {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+.loginButtonReg > div > input {
+  /* Here! */
+}
+
+.loginButtonReg > div > button {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 1.5rem;
+  border: none;
+  background-image: linear-gradient(to right, #fb7ba2, #fce043);
+  color: azure;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.loginLogin {
+  /* grid: loginRegister; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  font-size: 1.2rem;
+}
+
+.loginLogin > span {
+  cursor: pointer;
+}
+
+/* mobile */
+@media only screen and (max-width: 550px) {
+  .loginMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "loginData";
+    min-height: 100vh;
+    background-image: url("medias/background.jpg");
+    margin: 0;
+    padding: 0;
+  }
+
+  .loginData,
+  .loginRegisterPage {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .loginForm {
+    width: 100%;
+  }
+
+  .loginBackground {
+    display: none;
+  }
+}
