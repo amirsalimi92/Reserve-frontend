@@ -6,7 +6,7 @@
   position: relative;
   right: 2.25rem;
   top: 0.2rem;
-  color: black;
+  color: #000;
   cursor: pointer;
 }
 
@@ -21,7 +21,10 @@
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "loginData loginBackground";
   min-height: 100vh;
-  background-image: url("medias/background.jpg");
+  background-image: url("medias/loginBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -48,11 +51,15 @@
   padding-left: 5%;
 }
 
+.loginInput,
+.loginInputReg {
+  display: grid;
+  grid-row-gap: 5%;
+}
+
 .loginInput {
   grid: loginInput;
-  display: grid;
   grid-template-rows: 3fr 2fr;
-  grid-row-gap: 5%;
   grid-template-areas:
     "loginForm"
     "loginButton";
@@ -64,14 +71,18 @@
   grid-template-rows: repeat(4, 1fr);
 }
 
-.loginForm > div {
+.loginForm > div,
+.loginFormReg > div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .loginUsenameLabel,
-.loginPasswordLabel {
+.loginPasswordLabel,
+.loginEmailLabelReg,
+.loginUsenameLabelReg,
+.loginPasswordLabelReg {
   color: azure;
   font-size: 2em;
   display: flex;
@@ -80,7 +91,10 @@
 }
 
 .loginUsenameInput,
-.loginPasswordInput {
+.loginPasswordInput,
+.loginEmailInputReg,
+.loginUsenameInputReg,
+.loginPasswordInputReg {
   border-radius: 0.75rem;
   background-color: silver;
   font-size: 1rem;
@@ -91,9 +105,13 @@
 }
 
 .loginUsenameInput:focus,
-.loginPasswordInput:focus {
+.loginPasswordInput:focus,
+.loginEmailInputReg:focus,
+.loginUsenameInputReg:focus,
+.loginPasswordInputReg:focus {
   opacity: 1;
   outline: none;
+  background-color: azure;
 }
 
 .hidden {
@@ -112,7 +130,8 @@
   margin-right: 12.5%;
 }
 
-.loginButton > button {
+.loginButton > button,
+.loginButtonReg > div > button {
   padding-right: 10%;
   padding-left: 10%;
   padding-top: 3%;
@@ -143,6 +162,10 @@
   font-size: 1.2rem;
 }
 
+.loginRegister > span:hover {
+  scale: 1.2;
+}
+
 .loginRegister > span {
   cursor: pointer;
 }
@@ -157,51 +180,21 @@
   grid-template-areas:
     "loginText"
     "loginInput"
-    "loginRegister";
+    "loginLogin";
 }
 
 .loginInputReg {
   grid: loginInput;
-  display: grid;
   grid-template-rows: 5fr 2fr;
-  grid-row-gap: 5%;
   grid-template-areas:
-    "loginForm"
-    "loginButton";
+    "loginFormReg"
+    "loginButtonReg";
 }
 
 .loginFormReg {
   grid: loginFormReg;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-}
-
-.loginFormReg > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loginEmailLabelReg,
-.loginUsenameLabelReg,
-.loginPasswordLabelReg {
-  color: azure;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
-}
-
-.loginEmailInputReg,
-.loginUsenameInputReg,
-.loginPasswordInputReg {
-  border-radius: 0.75rem;
-  background-color: silver;
-  font-size: 1rem;
-  padding: 0 1rem;
-  width: 75%;
-  height: 75%;
-  opacity: 0.7;
 }
 
 .loginButtonReg {
@@ -216,8 +209,6 @@
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  color: azure;
-  font-size: 1.3rem;
 }
 
 .loginButtonReg > div:nth-child(2) {
@@ -226,25 +217,22 @@
   align-items: flex-start;
 }
 
-.loginButtonReg > div > input {
-  /* Here! */
+.loginButtonReg > div > label {
+  color: azure;
+  font-size: 1.3rem;
+  margin-top: 4%;
+  cursor: pointer;
 }
 
-.loginButtonReg > div > button {
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  border-radius: 1.5rem;
-  border: none;
-  background-image: linear-gradient(to right, #fb7ba2, #fce043);
-  color: azure;
-  font-size: larger;
+.loginButtonReg > div > input {
+  margin-top: 5%;
+  height: 1.2rem;
+  width: 1.2rem;
   cursor: pointer;
 }
 
 .loginLogin {
-  /* grid: loginRegister; */
+  grid: loginLogin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,6 +242,10 @@
 
 .loginLogin > span {
   cursor: pointer;
+}
+
+.loginLogin > span:hover {
+  scale: 1.2;
 }
 
 /* mobile */
@@ -279,5 +271,53 @@
 
   .loginBackground {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 860px) and (min-width: 551px) {
+  .loginMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "loginData";
+    min-height: 100vh;
+    background-image: url("medias/background.jpg");
+    margin: 0;
+    padding: 0;
+  }
+
+  .loginBackground,
+  .loginText {
+    display: none;
+  }
+
+  .loginData {
+    grid: loginData;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    grid-template-rows: 0.8fr 0.22fr;
+    grid-template-areas:
+      "loginInput"
+      "loginRegister";
+  }
+
+  .loginRegisterPage {
+    grid: loginRegisterPage;
+    padding: 1%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    grid-template-rows: 0.85fr 0.15fr;
+    grid-row-gap: 2%;
+    grid-template-areas:
+      "loginInput"
+      "loginLogin";
+  }
+
+  .loginUsenameInput,
+  .loginPasswordInput,
+  .loginEmailInputReg,
+  .loginUsenameInputReg,
+  .loginPasswordInputReg {
+    max-height: 50px !important;
   }
 }
