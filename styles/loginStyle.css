@@ -231,6 +231,10 @@
   cursor: pointer;
 }
 
+.loginCheckboxReg:checked {
+  background-color: orange;
+}
+
 .loginLogin {
   grid: loginLogin;
   display: flex;

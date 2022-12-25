@@ -12,16 +12,39 @@
 
 <body>
     <div class="base">
-        <div class="navbarFull">
-            <div class="navbarTop">
-                <div class="hamburger"></div>
-                <div class="signout"></div>
-            </div>
-            <div class="navbarBottom"></div>
-        </div>
-        <div class="profileContent"></div>
+        <header>
+            <nav class="navbar">
+                <a href="#" class="navLogo">Reserve</a>
+
+                <ul class="navMenu">
+                    <li class="navMenuItem">
+                        <a href="#" class="navMenuItemLink">Home</a>
+                        <div class="dropdown">
+                            <a href="#" class="floor">First floor</a>
+                            <a href="#" class="floor">Second floor</a>
+                            <a href="#" class="floor">Third floor</a>
+                        </div>
+                    </li>
+                    <li class="navMenuItem">
+                        <a href="#" class="navMenuItemLink">About</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a href="#" class="navMenuItemLink">Contant</a>
+                    </li>
+                </ul>
+
+                <div class="logout">Sign out</div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
     </div>
 
+    <script src="scripts/navbar.js"></script>
 </body>
 
 </html>
