@@ -46,6 +46,7 @@
   padding: 2.5%;
   box-sizing: border-box;
   border-radius: 0.5rem;
+  resize: none;
 }
 
 .reportSender label,
