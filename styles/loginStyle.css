@@ -259,7 +259,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: "loginData";
     min-height: 100vh;
-    background-image: url("medias/background.jpg");
+    background-image: url("medias/loginBackground.jpg");
     margin: 0;
     padding: 0;
   }
@@ -284,7 +284,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: "loginData";
     min-height: 100vh;
-    background-image: url("medias/background.jpg");
+    background-image: url("medias/loginBackground.jpg");
     margin: 0;
     padding: 0;
   }

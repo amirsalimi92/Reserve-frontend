@@ -11,6 +11,10 @@ header {
   background-color: #1971c2;
 }
 
+li {
+  cursor: pointer;
+}
+
 .navLogo {
   color: azure;
   font-size: 2rem;
@@ -33,6 +37,7 @@ header {
 
 .navMenuItem {
   list-style: none;
+  justify-content: start;
 }
 
 .navMenuItemLink {
@@ -41,12 +46,13 @@ header {
   text-decoration: none;
 }
 
-.navMenuItemLink:hover {
-  color: yellow;
+.welcome {
+  color: azure;
 }
 
 .logout {
   color: red;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -62,6 +68,32 @@ header {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: white;
+}
+
+.dropdown > li {
+  display: block;
+}
+
+.dropdown {
+  width: 20%;
+  background: #1971c2;
+  position: absolute;
+  z-index: +2;
+  display: none;
+  overflow: hidden;
+}
+
+.dropdown > li {
+  padding: 25px;
+}
+
+.dropdown > li > a {
+  color: azure;
+  text-decoration: none;
+}
+
+.navMenuItem:hover > .dropdown {
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -99,5 +131,18 @@ header {
   .navMenu.active {
     left: 0;
     margin: 0;
+  }
+
+  .welcome {
+    display: none;
+  }
+
+  .dropdown {
+    width: 55%;
+    text-align: center;
+  }
+
+  .dropdown > li {
+    padding: 20px;
   }
 }
