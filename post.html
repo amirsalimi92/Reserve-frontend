@@ -8,12 +8,10 @@
     <!-- google styles -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <!-- my styles -->
     <link rel="shortcut icon" href="styles/medias/tabLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/profileStyle.css">
-    <link rel="stylesheet" href="styles/report.css">
+    <link rel="stylesheet" href="styles/post.css">
     <title>Post | Reserve</title>
 </head>
 
@@ -36,12 +34,9 @@
                         <a class="navMenuItemLink">Settings</a>
                         <ul class="dropdown">
                             <li><a href="#">About the APP</a></li>
-                            <li><a href="#">Report the Bug</a></li>
-                            <li><a href="#">Preferences</a></li>
+                            <li><a href="report.html">Report the Bug</a></li>
+                            <li><a href="profile.html">Preferences</a></li>
                         </ul>
-                    </li>
-                    <li class="navMenuItem">
-                        <a href="#" class="navMenuItemLink">Post Status</a>
                     </li>
                 </ul>
 
@@ -61,11 +56,57 @@
         </header>
 
         <!-- End of navbar -->
+        <!-- Start of content -->
+        <div class="postBase">
+            <div class="postContent">
+                <div class="postSearch">
+                    <label for="postSearchInput">Search here: </label>
+                    <input type="text" id="postSearchInput">
+                    <div>
+                        <button type="submit">Go</button>
+                        <button class="postSearchRefresh">Refresh</button>
+                    </div>
+
+                </div>
+                <div class="postShow">
+                    <table>
+                        <tbody>
+                            <tr class="postShowHead">
+                                <td>Reciever</td>
+                                <!-- from this row should recieve by server -->
+                                <td>Where is the Paket</td>
+                            </tr>
+                            <tr class="postShowResult">
+                                <td class="result ">Amir</td>
+                                <td class="result">IT-Office</td>
+                            </tr>
+                            <tr class="postShowResult">
+                                <td class="result">Max</td>
+                                <td class="result">Joachim's office</td>
+                            </tr>
+                            <tr class="postShowResult">
+                                <td class="result">Feredrik</td>
+                                <td class="result">Sylvia's office</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="postAdd">
+                    <form action="" method="post">
+                        <label for="postAddInput">Add new one: </label>
+                        <input placeholder="For whom?" type="text" id="postAddInputName">
+                        <input placeholder="Where?" type="text" id="postAddInputWhere">
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </div>
 
     <script src="scripts/navbar.js"></script>
-    <script src="scripts/reportTheme.js"></script>
+    <script src="scripts/postTheme.js"></script>
+    <!-- <script src="scripts/reportTheme.js"></script> -->
 </body>
 
 </html>

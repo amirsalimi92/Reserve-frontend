@@ -138,10 +138,12 @@ li {
 
 .nightDropdown {
   background: #272b33;
+  transition: 0.5s;
 }
 
 .navMenuNight {
   background-color: #272b33 !important;
+  transition: 0.5s;
 }
 
 @media (max-width: 768px) {
