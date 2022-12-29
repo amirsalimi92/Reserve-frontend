@@ -81,7 +81,7 @@
 /* night them */
 .reportBaseNight {
   background-color: #0a0c10 !important;
-  color: whitesmoke;
+  color: lightgray;
   transition: 0.5s;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .reportSenderNight {
-  background-color: whitesmoke;
+  background-color: lightgray;
 }
 
 @media only screen and (max-width: 550px) {

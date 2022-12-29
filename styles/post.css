@@ -159,3 +159,57 @@
   color: lightgray;
   transition: 0.5s;
 }
+
+@media only screen and (max-width: 550px) {
+  .postContent {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .postSearch label {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .postSearch input {
+    display: block;
+    margin: 3% auto;
+    width: 60%;
+  }
+
+  .postSearch div {
+    display: block;
+    text-align: center;
+    margin: 5% auto;
+  }
+
+  .postShow {
+    margin: 7% auto;
+  }
+
+  .postShow table {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .postAdd {
+    margin: 3% auto;
+  }
+
+  .postAdd label {
+    display: block;
+    text-align: center;
+  }
+
+  .postAdd input {
+    display: block;
+    margin: 2% auto;
+    width: 75% !important;
+  }
+
+  .postAdd button {
+    display: block;
+    margin: 3% auto;
+  }
+}
